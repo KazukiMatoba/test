@@ -3,7 +3,7 @@ runtime: python3
 build:
  commands:
   pre-build:
-    - yum install openssl
+    - yum update openssl-*
   build:
     - pip install --upgrade pip
     - pip install -r requirements.txt
