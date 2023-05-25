@@ -2,9 +2,11 @@ version: 1.0
 runtime: python3
 build:
  commands:
+  pre-build:
+    - yum install openssl
   build:
-  - pip install --upgrade pip
-  - pip install -r requirements.txt
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
 run:
  command: flask run --host 0.0.0.0 --port 5000
  network:
