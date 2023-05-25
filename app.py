@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hello World!" + ssl.OPENSS_VERSION
+    return "Hello World!" + ssl.OPENSSL_VERSION
 
 @app.route("/api/v1/hello")
 def hello():
