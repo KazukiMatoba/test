@@ -1,10 +1,11 @@
 from flask import Flask, jsonify
+import ssl
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Hello World!"
+    return "Hello World!" + ssl.OPENSS_VERSION
 
 @app.route("/api/v1/hello")
 def hello():
